@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web-Based Crypto Wallet (HD Wallet)
 
-## Getting Started
+This is a Next.js-based web application that generates a secure seed phrase and derives multiple sub-wallets using Hierarchical Deterministic (HD) wallet principles.
 
-First, run the development server:
+## Features
+- Generate a 12 or 24-word seed phrase.
+- Derive multiple sub-wallets (accounts) from the seed phrase.
+- View wallet addresses and corresponding private keys.
+- Client-side generation for enhanced security.
+- Minimalist and easy-to-use UI.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Wallet Library:** ethers.js / bitcoinjs-lib (depending on blockchain support)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js (>= 16.x)
+- npm or yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/hrishabh6/Web3-Wallet.git
+   cd Web3-Wallet
+   ```
+2. Install dependencies:
+   ```bash
+   npm install  # or yarn install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev  # or yarn dev
+   ```
+4. Open `http://localhost:3000` in your browser.
 
-## Learn More
+## Usage
+- Click "Generate Seed Phrase" to create a new seed.
+- Save the seed phrase securely.
+- Use the seed to generate multiple sub-wallets.
+- Copy addresses and private keys as needed.
 
-To learn more about Next.js, take a look at the following resources:
+## Security Considerations
+- **DO NOT** expose your seed phrase or private keys.
+- Always use secure storage solutions.
+- Consider integrating hardware wallet support for enhanced security.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
+This project is open-source under the MIT License.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
+Feel free to modify this README to fit your project's specifics!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
